@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afgeleiden - Wiskunde Hulp</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a class="terug-link" href="../index.html">
+      <h1>Wiskunde Hulp</h1>
+    </a>
+    <span class="logo">📐</span>
+  </header>
+
+  <main class="tool-container">
+    <a class="terug-link" href="../index.html">&larr; Terug naar overzicht</a>
+    <h2>Afgeleiden</h2>
+    <p class="uitleg">
+      De afgeleide van een functie geeft de helling van de grafiek op elk
+      punt. Voor elke term a&middot;x<sup>n</sup> geldt de machtsregel: de
+      afgeleide is a&middot;n&middot;x<sup>n-1</sup>. Vul de coëfficiënten
+      van je veelterm in (zet 0 waar een term ontbreekt).
+    </p>
+
+    <div class="visueel">
+      <p class="formule">f(x) = a&middot;x<sup>n</sup> &rarr; f'(x) = a&middot;n&middot;x<sup>n-1</sup></p>
+    </div>
+
+    <div class="rekentool">
+      <label for="coef-4">Coëfficiënt bij x&#8308;</label>
+      <input type="number" id="coef-4" step="any" placeholder="bijv. 0">
+
+      <label for="coef-3">Coëfficiënt bij x&sup3;</label>
+      <input type="number" id="coef-3" step="any" placeholder="bijv. 2">
+
+      <label for="coef-2">Coëfficiënt bij x&sup2;</label>
+      <input type="number" id="coef-2" step="any" placeholder="bijv. -3">
+
+      <label for="coef-1">Coëfficiënt bij x</label>
+      <input type="number" id="coef-1" step="any" placeholder="bijv. 5">
+
+      <label for="coef-0">Constante term</label>
+      <input type="number" id="coef-0" step="any" placeholder="bijv. 1">
+
+      <button id="bereken-knop" type="button">Bereken</button>
+    </div>
+
+    <p id="uitkomst" class="uitkomst"></p>
+  </main>
+
+  <script type="py" src="afgeleiden.py"></script>
+</body>
+</html>

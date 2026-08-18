@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pythagoras - Wiskunde Hulp</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Wiskunde Hulp</h1>
+    <span class="logo">📐</span>
+  </header>
+
+  <main class="tool-container">
+    <a class="terug-link" href="../index.html">&larr; Terug naar overzicht</a>
+    <h2>Pythagoras</h2>
+    <p class="uitleg">
+      In een rechthoekige driehoek is het kwadraat van de schuine zijde (c)
+      gelijk aan de som van de kwadraten van de twee rechthoekszijden (a en b).
+    </p>
+
+    <div class="visueel">
+      <svg viewBox="0 0 220 160" width="220" height="160" role="img"
+           aria-label="Rechthoekige driehoek met zijden a, b en c">
+        <polygon points="20,140 20,20 180,140" fill="#eef2ff" stroke="#4f46e5" stroke-width="2" />
+        <rect x="20" y="120" width="20" height="20" fill="none" stroke="#4f46e5" stroke-width="2" />
+        <text x="4" y="85" font-size="16" fill="#1e293b">a</text>
+        <text x="95" y="158" font-size="16" fill="#1e293b">b</text>
+        <text x="100" y="72" font-size="16" fill="#1e293b">c</text>
+      </svg>
+      <p class="formule">a&sup2; + b&sup2; = c&sup2;</p>
+    </div>
+
+    <div class="rekentool">
+      <label for="zijde-a">Zijde a</label>
+      <input type="number" id="zijde-a" step="any" placeholder="bijv. 3">
+
+      <label for="zijde-b">Zijde b</label>
+      <input type="number" id="zijde-b" step="any" placeholder="bijv. 4">
+
+      <label for="zijde-c">Schuine zijde c</label>
+      <input type="number" id="zijde-c" step="any" placeholder="bijv. 5">
+
+      <p class="hint">Laat één van de drie velden leeg (of op 0) om die zijde te berekenen.</p>
+
+      <button id="bereken-knop" type="button">Bereken</button>
+    </div>
+
+    <p id="uitkomst" class="uitkomst"></p>
+  </main>
+
+  <script type="py" src="pythagoras.py"></script>
+</body>
+</html>

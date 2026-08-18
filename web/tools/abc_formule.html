@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABC-formule - Wiskunde Hulp</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Wiskunde Hulp</h1>
+    <span class="logo">📐</span>
+  </header>
+
+  <main class="tool-container">
+    <a class="terug-link" href="../index.html">&larr; Terug naar overzicht</a>
+    <h2>ABC-formule</h2>
+    <p class="uitleg">
+      Voor een kwadratische vergelijking ax&sup2; + bx + c = 0 vind je de
+      oplossingen met de ABC-formule. De discriminant D = b&sup2; - 4ac
+      bepaalt hoeveel oplossingen er zijn.
+    </p>
+
+    <div class="visueel">
+      <p class="formule">x = (-b &plusmn; &radic;(b&sup2; - 4ac)) / 2a</p>
+    </div>
+
+    <div class="rekentool">
+      <label for="coef-a">Coëfficiënt a</label>
+      <input type="number" id="coef-a" step="any" placeholder="bijv. 1">
+
+      <label for="coef-b">Coëfficiënt b</label>
+      <input type="number" id="coef-b" step="any" placeholder="bijv. -3">
+
+      <label for="coef-c">Coëfficiënt c</label>
+      <input type="number" id="coef-c" step="any" placeholder="bijv. 2">
+
+      <button id="bereken-knop" type="button">Bereken</button>
+    </div>
+
+    <p id="uitkomst" class="uitkomst"></p>
+  </main>
+
+  <script type="py" src="abc_formule.py"></script>
+</body>
+</html>

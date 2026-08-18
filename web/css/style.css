@@ -1,0 +1,193 @@
+:root {
+  --kleur-primair: #4f46e5;
+  --kleur-primair-donker: #4338ca;
+  --kleur-achtergrond: #f8fafc;
+  --kleur-kaart: #ffffff;
+  --kleur-tekst: #1e293b;
+  --kleur-tekst-zacht: #64748b;
+  --kleur-rand: #e2e8f0;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--kleur-achtergrond);
+  color: var(--kleur-tekst);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header, zie schets: volle breedte met titel en logo */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: var(--kleur-primair);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.intro {
+  text-align: center;
+  color: var(--kleur-tekst-zacht);
+  margin-bottom: 2rem;
+}
+
+/* Grid met tool-kaarten, zie schets: rijen van blokken */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool-card {
+  display: block;
+  background: var(--kleur-kaart);
+  border: 1px solid var(--kleur-rand);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tool-card .icoon {
+  font-size: 2.5rem;
+}
+
+.tool-card h2 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.tool-card p {
+  margin: 0;
+  color: var(--kleur-tekst-zacht);
+  font-size: 0.95rem;
+}
+
+/* Individuele toolpagina's */
+.tool-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.terug-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--kleur-primair);
+  font-weight: 600;
+}
+
+.uitleg {
+  color: var(--kleur-tekst-zacht);
+  line-height: 1.5;
+}
+
+.visueel {
+  background: var(--kleur-kaart);
+  border: 1px solid var(--kleur-rand);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.formule {
+  font-size: 1.3rem;
+  font-family: Cambria, Georgia, serif;
+  margin: 0.75rem 0 0;
+}
+
+.rekentool {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--kleur-kaart);
+  border: 1px solid var(--kleur-rand);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.rekentool label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.rekentool input {
+  padding: 0.6rem;
+  border: 1px solid var(--kleur-rand);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--kleur-tekst-zacht);
+  margin: 0;
+}
+
+button {
+  align-self: flex-start;
+  background: var(--kleur-primair);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--kleur-primair-donker);
+}
+
+.uitkomst {
+  white-space: pre-line;
+  background: #eef2ff;
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  min-height: 1.5rem;
+}
